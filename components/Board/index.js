@@ -1,16 +1,21 @@
 import React from 'react'
-import {Chips} from '../Chips'
+import { Collums } from "../Collums"
 
-let rows = []
 
-for (var i = 0; i < 108; i++) {
-    rows.push(<Chips></Chips>);
-}
 
-export const Board = ({}) => (
-   <div className='grid grid-cols-12 bg-blue-400 '>
+export const Board = ({BoardData, handleTurn, turn}) => {
+    
+    let rows = []
+
+
+    
+    BoardData.forEach(({colors,setColors}) => {
+        rows.push(<Collums colors={colors} setColors={setColors} handleTurn={handleTurn} turn={turn}></Collums>)
+    });
+    
+    return (
+    <div className='grid grid-cols-32 bg-blue-400 '>
         {rows}
-        
-   </div>
-)
+    </div>
+)}
 
