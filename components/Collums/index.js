@@ -1,14 +1,12 @@
 import React from 'react'
 
 
-import {Chips} from '../Chips'
-
-
+import { Chips } from '../Chips'
 
 export const Collums = ({colors, setColors, handleTurn, turn}) => {
     
     
-    let chips = []  
+    let chips = []   
 
     if (colors.length > 0) { 
         for(let i = 0; i<colors.length; i++){
@@ -23,8 +21,8 @@ export const Collums = ({colors, setColors, handleTurn, turn}) => {
     const onSubmit = (event) => {
         event.preventDefault();
         if (colors.length < 18) {
-            setColors([...colors,{color:turn.color}])
-            handleTurn()
+            setColors([...colors,{color: 'red'}])
+            // handleTurn()
         }
         
       };

@@ -7,8 +7,8 @@ export const Chips = ({chip}) => {
    
    
    if (chip) {
-   const mystyle = {background:chip.color}
-   return (<div style={mystyle} className='m-1 w-[2.6vw] h-[2.6vw] transition duration-100 drop-shadow-xl rounded-full justify-self-center'>      
+   // const mystyle = {background:chip.color}
+   return (<div /* style={mystyle} */ className='bg-red m-1 w-[2.6vw] h-[2.6vw] transition duration-100 drop-shadow-xl rounded-full justify-self-center'>      
    </div>)
    }
    
