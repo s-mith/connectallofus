@@ -19,16 +19,6 @@ const colors =
 
 function MyApp ({ Component, pageProps }) 
 {
-  let colorMap =
-  [
-    { 
-      color: 'red' 
-    },
-    { 
-      color: 'blue' 
-    }
-  ];
-
   let playerId;
   let playerRef;
 
@@ -99,17 +89,6 @@ function MyApp ({ Component, pageProps })
   return (
     <>
 
-      // TODO: Fix this map (not working at all)
-      <div>
-        {
-          colorMap.map (item => 
-          {
-            <PlayerTag 
-              color={item.color}
-            />
-          })
-        }
-      </div>
       <Component {...pageProps} />
 
     </>
